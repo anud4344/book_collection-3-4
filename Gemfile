@@ -5,7 +5,7 @@ ruby "3.1.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"
-
+gem 'rexml'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -51,10 +51,19 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'rspec-rails'
 end
 
 # Logger Error Fix
 gem 'concurrent-ruby', '1.3.4'
+
+group :test do
+   # Adds support for Capybara system testing and selenium driver
+   gem 'capybara', '>= 3.26'
+   gem 'selenium-webdriver'
+   # Easy installation and use of web drivers to run system tests with browsers
+   gem 'webdrivers'
+end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
