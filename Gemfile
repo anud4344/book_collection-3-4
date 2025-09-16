@@ -79,3 +79,8 @@ group :development do
   # gem "spring"
 end
 
+gem 'brakeman'
+gem 'rubocop'
+
+
+
